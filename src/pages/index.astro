@@ -1,17 +1,31 @@
 ---
+import Layout from '../layouts/Layout.astro';
+import AnimatedName from '../components/AnimatedName.tsx';
 
 ---
 
-<html lang="en">
+<html lang="de">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>Moritz Harms | Animation</title>
+		<style>
+			body {
+				background-color: #050505; /* Dunkler Hintergrund sieht bei Signaturen meist besser aus */
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 100vh;
+				margin: 0;
+			}
+			.container {
+				width: 80%;
+				max-width: 2000px;
+			}
+		</style>
 	</head>
 	<body>
-		<h1>Test</h1>
+		<div class="container">
+			<AnimatedName client:load />
+		</div>
 	</body>
 </html>
