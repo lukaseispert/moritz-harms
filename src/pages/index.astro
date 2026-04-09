@@ -13,21 +13,25 @@ import Navbar from '../components/Navbar.astro';
   }
 
 @font-face {
-    font-family: 'Climate Crisis';
-    src: url('/fonts/ClimateCrisis-Regular.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-  }
-
+  font-family: 'Climate Crisis';
+  
+  src: url('/fonts/ClimateCrisis-Regular-VariableFont_YEAR.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
   body {
     font-family: '42dot Sans', sans-serif;
     background-color: #000;
     color: #fff;
   }
 
-  h1, .navbar li {
+  h1 {
     font-family: 'Climate Crisis', sans-serif;
+	font-variation-settings: 'YEAR' 2000;
+	margin-top: 200px;
+	text-align: center;
+	font-size: 60px;
   }
 
 </style>
@@ -39,6 +43,9 @@ import Navbar from '../components/Navbar.astro';
 		
 	</head>
 	<body>
-		<Navbar class="navbar"/>
+		<Navbar />
+		<main>
+		<h1>MORITZ HARMS</h1>
+		</main>
 	</body>
 </html>
