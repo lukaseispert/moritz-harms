@@ -2,21 +2,41 @@
 import Navbar from '../components/Navbar.astro';
 ---
 
+<style is:global>
+
+@font-face {
+    font-family: '42dot Sans';
+    src: url('/fonts/42dotSans-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+@font-face {
+    font-family: 'Climate Crisis';
+    src: url('/fonts/ClimateCrisis-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  body {
+    font-family: '42dot Sans', sans-serif;
+    background-color: #000;
+    color: #fff;
+  }
+
+  h1, .navbar li {
+    font-family: 'Climate Crisis', sans-serif;
+  }
+
+</style>
+
 <html lang="de">
 	<head>
 		<meta charset="utf-8" />
 		<title>Moritz Harms</title>
-		<style>
-		body {
-        	background-color: #000000;
-        	color: #ffffff; 
-        	margin: 0;
-        	min-height: 100vh; 
-    		}
-  			main {
-    			margin-top: 60px; 
-  			}
-</style>
+		
 	</head>
 	<body>
 		<Navbar class="navbar"/>
